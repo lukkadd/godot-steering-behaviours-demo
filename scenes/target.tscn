@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://cs0446kmbl4t3"]
+
+[ext_resource type="Texture2D" uid="uid://igs4ahn4ix36" path="res://assets/tile_0001.png" id="1_8eil8"]
+[ext_resource type="Texture2D" uid="uid://bdephmlte22g4" path="res://assets/tile_0070.png" id="1_fxac4"]
+[ext_resource type="Texture2D" uid="uid://4pa6l4ublfeh" path="res://assets/tile_0071.png" id="2_6v2im"]
+[ext_resource type="FontFile" uid="uid://bfl3qfjo8qnge" path="res://assets/PressStart2P-Regular.ttf" id="4_mfr0s"]
+[ext_resource type="StyleBox" uid="uid://46tpiiwgqmhr" path="res://resources/label_stylebox.tres" id="5_6ig4s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_plhr8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fxac4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6v2im")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="Target" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_8eil8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(12, -16)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_plhr8")
+autoplay = "default"
+frame_progress = 0.483567
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -31.0
+offset_top = -66.0
+offset_right = 33.0
+offset_bottom = -50.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("4_mfr0s")
+theme_override_styles/normal = ExtResource("5_6ig4s")
+text = "Flag"

@@ -1,0 +1,64 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://bvvho6mnw7g2r"]
+
+[ext_resource type="FontFile" uid="uid://bfl3qfjo8qnge" path="res://assets/PressStart2P-Regular.ttf" id="1_hmjhw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsup1"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.278431, 0.164706, 0.215686, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txfbx"]
+bg_color = Color(0.611765, 0.482353, 0.447059, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xktkl"]
+bg_color = Color(0.486275, 0.341176, 0.360784, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ljcin"]
+bg_color = Color(0.313726, 0.211765, 0.223529, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+anti_aliasing = false
+
+[resource]
+Button/fonts/font = ExtResource("1_hmjhw")
+Button/styles/focus = SubResource("StyleBoxFlat_jsup1")
+Button/styles/hover = SubResource("StyleBoxFlat_txfbx")
+Button/styles/normal = SubResource("StyleBoxFlat_xktkl")
+Button/styles/pressed = SubResource("StyleBoxFlat_ljcin")
+Label/fonts/font = ExtResource("1_hmjhw")

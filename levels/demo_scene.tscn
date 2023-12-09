@@ -1,0 +1,274 @@
+[gd_scene load_steps=14 format=3 uid="uid://l0gkfwa4wu36"]
+
+[ext_resource type="Script" path="res://levels/demo_scene.gd" id="1_lvrah"]
+[ext_resource type="Texture2D" uid="uid://p47w174ys8ay" path="res://assets/Ocean-and-Clouds-Free-Pixel-Art-Backgrounds9.png" id="2_7y2uc"]
+[ext_resource type="PackedScene" uid="uid://cs0446kmbl4t3" path="res://scenes/target.tscn" id="3_ur3n5"]
+[ext_resource type="Texture2D" uid="uid://jgro0igfw6sl" path="res://assets/tile_0077.png" id="4_7rfel"]
+[ext_resource type="FontFile" uid="uid://bfl3qfjo8qnge" path="res://assets/PressStart2P-Regular.ttf" id="5_4b21r"]
+[ext_resource type="Texture2D" uid="uid://nbxvjcomve3w" path="res://assets/tile_0078.png" id="6_fspuy"]
+[ext_resource type="Texture2D" uid="uid://dfvyf0mykj03k" path="res://assets/tile_0089.png" id="7_3jsnf"]
+[ext_resource type="Texture2D" uid="uid://cq0ynkpoawg4i" path="res://assets/tile_0085.png" id="8_nkj5y"]
+[ext_resource type="Texture2D" uid="uid://boq15mbwx1auo" path="res://assets/tile_0087.png" id="9_cmqb5"]
+[ext_resource type="Texture2D" uid="uid://cah7om2svmc1p" path="res://assets/tile_0120.png" id="10_1qgdn"]
+[ext_resource type="Texture2D" uid="uid://ghailixmpd3r" path="res://assets/tile_0122.png" id="11_d6i4j"]
+[ext_resource type="Texture2D" uid="uid://qlmulr7ifif1" path="res://assets/tile_0155.png" id="12_svd5l"]
+[ext_resource type="Texture2D" uid="uid://c1he7prn0okwr" path="res://assets/tile_0157.png" id="13_8js8o"]
+
+[node name="Demo Scene" type="Node"]
+script = ExtResource("1_lvrah")
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="bg" type="Sprite2D" parent="World"]
+position = Vector2(707, 366)
+texture = ExtResource("2_7y2uc")
+
+[node name="Target" parent="World" instance=ExtResource("3_ur3n5")]
+position = Vector2(1230, 419)
+
+[node name="Vehicles" type="Node" parent="World"]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="Tutorial" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Tutorial"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/Tutorial/MarginContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="left_click" type="TextureRect" parent="MarginContainer/Tutorial/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("4_7rfel")
+stretch_mode = 4
+
+[node name="spawn_v" type="Label" parent="MarginContainer/Tutorial/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("5_4b21r")
+text = "Spawn Vehicle"
+vertical_alignment = 1
+
+[node name="right_click" type="TextureRect" parent="MarginContainer/Tutorial/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("6_fspuy")
+stretch_mode = 4
+
+[node name="delete_v" type="Label" parent="MarginContainer/Tutorial/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("5_4b21r")
+text = "Delete Vehicle"
+vertical_alignment = 1
+
+[node name="T" type="TextureRect" parent="MarginContainer/Tutorial/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("7_3jsnf")
+stretch_mode = 4
+
+[node name="change_t" type="Label" parent="MarginContainer/Tutorial/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("5_4b21r")
+text = "Change Target"
+vertical_alignment = 1
+
+[node name="QE" type="HBoxContainer" parent="MarginContainer/Tutorial/MarginContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Q" type="TextureRect" parent="MarginContainer/Tutorial/MarginContainer/GridContainer/QE"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("8_nkj5y")
+stretch_mode = 4
+
+[node name="E" type="TextureRect" parent="MarginContainer/Tutorial/MarginContainer/GridContainer/QE"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("9_cmqb5")
+stretch_mode = 4
+
+[node name="Max Force" type="Label" parent="MarginContainer/Tutorial/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("5_4b21r")
+text = "-/+ Max Force
+"
+vertical_alignment = 1
+
+[node name="AD" type="HBoxContainer" parent="MarginContainer/Tutorial/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="A" type="TextureRect" parent="MarginContainer/Tutorial/MarginContainer/GridContainer/AD"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("10_1qgdn")
+stretch_mode = 4
+
+[node name="D" type="TextureRect" parent="MarginContainer/Tutorial/MarginContainer/GridContainer/AD"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("11_d6i4j")
+stretch_mode = 4
+
+[node name="Max Speed" type="Label" parent="MarginContainer/Tutorial/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("5_4b21r")
+text = "-/+ Max Speed"
+vertical_alignment = 1
+
+[node name="ZC" type="HBoxContainer" parent="MarginContainer/Tutorial/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Z" type="TextureRect" parent="MarginContainer/Tutorial/MarginContainer/GridContainer/ZC"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("12_svd5l")
+stretch_mode = 4
+
+[node name="C" type="TextureRect" parent="MarginContainer/Tutorial/MarginContainer/GridContainer/ZC"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+texture = ExtResource("13_8js8o")
+stretch_mode = 4
+
+[node name="Mass" type="Label" parent="MarginContainer/Tutorial/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("5_4b21r")
+text = "-/+ Mass"
+vertical_alignment = 1
+
+[node name="Current_Vars" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/Current_Vars"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/Current_Vars/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="hboxfields" type="HBoxContainer" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="hbox_target" type="HBoxContainer" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields"]
+layout_mode = 2
+
+[node name="target" type="Label" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields/hbox_target"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_4b21r")
+text = "Target:"
+
+[node name="target_value" type="Label" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields/hbox_target"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_4b21r")
+text = "Mouse"
+
+[node name="hbox_max_force" type="HBoxContainer" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields"]
+layout_mode = 2
+
+[node name="max_force" type="Label" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields/hbox_max_force"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_4b21r")
+text = "Max Force:"
+
+[node name="max_force_value" type="Label" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields/hbox_max_force"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_4b21r")
+text = "1"
+
+[node name="hbox_max_speed" type="HBoxContainer" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields"]
+layout_mode = 2
+
+[node name="max_speed" type="Label" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields/hbox_max_speed"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_4b21r")
+text = "Max Speed:"
+
+[node name="max_speed_value" type="Label" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields/hbox_max_speed"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_4b21r")
+text = "10"
+
+[node name="hbox_mass" type="HBoxContainer" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields"]
+layout_mode = 2
+
+[node name="mass" type="Label" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields/hbox_mass"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_4b21r")
+text = "Mass:"
+
+[node name="mass_value" type="Label" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields/hbox_mass"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_4b21r")
+text = "1"
+
+[node name="hboxfields2" type="HBoxContainer" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="hbox_fps" type="HBoxContainer" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields2"]
+layout_mode = 2
+
+[node name="fps" type="Label" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields2/hbox_fps"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_4b21r")
+text = "FPS:"
+
+[node name="fps_value" type="Label" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields2/hbox_fps"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_4b21r")
+text = "000"
+
+[node name="hbox_ships" type="HBoxContainer" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields2"]
+layout_mode = 2
+
+[node name="ships" type="Label" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields2/hbox_ships"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_4b21r")
+text = "Ships:"
+
+[node name="ships_value" type="Label" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields2/hbox_ships"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_4b21r")
+text = "0"

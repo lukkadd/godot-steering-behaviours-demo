@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddsptvx4vnq1o"]
+
+[ext_resource type="PackedScene" uid="uid://ssaq2mrhq8po" path="res://scenes/fps_counter.tscn" id="1_psywm"]
+[ext_resource type="PackedScene" uid="uid://byx8mbbxlcrtp" path="res://scenes/vehicle.tscn" id="1_rm6lt"]
+[ext_resource type="Script" path="res://scripts/target.gd" id="5_tv534"]
+
+[node name="World" type="Node2D"]
+
+[node name="FPS counter" parent="." instance=ExtResource("1_psywm")]
+text = "00000"
+
+[node name="Vehicle" parent="." node_paths=PackedStringArray("target") instance=ExtResource("1_rm6lt")]
+position = Vector2(540, 223)
+target = NodePath("../target")
+
+[node name="Vehicle2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("1_rm6lt")]
+position = Vector2(545, 419)
+target = NodePath("../target")
+
+[node name="target" type="Node2D" parent="."]
+position = Vector2(1107, 361)
+script = ExtResource("5_tv534")
+
+[node name="Label" type="Label" parent="target"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -23.5
+offset_right = 23.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "target"

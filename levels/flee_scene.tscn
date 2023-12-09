@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvuxko3embewm"]
+
+[ext_resource type="PackedScene" uid="uid://l0gkfwa4wu36" path="res://levels/demo_scene.tscn" id="1_vinql"]
+[ext_resource type="Script" path="res://levels/flee_scene.gd" id="2_3neny"]
+
+[node name="Flee_Scene" instance=ExtResource("1_vinql")]
+script = ExtResource("2_3neny")

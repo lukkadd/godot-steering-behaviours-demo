@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="Flee" load_steps=2 format=3 uid="uid://h7x7p14m1uha"]
+
+[ext_resource type="Script" path="res://scripts/flee.gd" id="1_nf80c"]
+
+[resource]
+script = ExtResource("1_nf80c")
