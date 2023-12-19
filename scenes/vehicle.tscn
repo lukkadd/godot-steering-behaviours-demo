@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://byx8mbbxlcrtp"]
+[gd_scene load_steps=5 format=3 uid="uid://byx8mbbxlcrtp"]
 
 [ext_resource type="Script" path="res://scripts/vehicle.gd" id="1_l60v5"]
 [ext_resource type="Texture2D" uid="uid://cihheugh8ljta" path="res://assets/ship_0010.png" id="1_tutr1"]
@@ -6,17 +6,29 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cxve6"]
 size = Vector2(59, 50)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xy34l"]
+size = Vector2(59, 400)
+
 [node name="Vehicle" type="Node2D"]
+rotation = 1.5708
 script = ExtResource("1_l60v5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(3, 3)
 texture = ExtResource("1_tutr1")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="ClickableArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickableArea"]
 position = Vector2(0.5, 2)
 shape = SubResource("RectangleShape2D_cxve6")
 
-[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[node name="Gizmos" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.000626266, -173)
+shape = SubResource("RectangleShape2D_xy34l")
+
+[connection signal="input_event" from="ClickableArea" to="." method="_on_area_2d_input_event"]

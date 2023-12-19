@@ -1,8 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://l0gkfwa4wu36"]
+[gd_scene load_steps=13 format=3 uid="uid://l0gkfwa4wu36"]
 
 [ext_resource type="Script" path="res://levels/demo_scene.gd" id="1_lvrah"]
 [ext_resource type="Texture2D" uid="uid://p47w174ys8ay" path="res://assets/Ocean-and-Clouds-Free-Pixel-Art-Backgrounds9.png" id="2_7y2uc"]
-[ext_resource type="PackedScene" uid="uid://cs0446kmbl4t3" path="res://scenes/target.tscn" id="3_ur3n5"]
 [ext_resource type="Texture2D" uid="uid://jgro0igfw6sl" path="res://assets/tile_0077.png" id="4_7rfel"]
 [ext_resource type="FontFile" uid="uid://bfl3qfjo8qnge" path="res://assets/PressStart2P-Regular.ttf" id="5_4b21r"]
 [ext_resource type="Texture2D" uid="uid://nbxvjcomve3w" path="res://assets/tile_0078.png" id="6_fspuy"]
@@ -22,9 +21,6 @@ script = ExtResource("1_lvrah")
 [node name="bg" type="Sprite2D" parent="World"]
 position = Vector2(707, 366)
 texture = ExtResource("2_7y2uc")
-
-[node name="Target" parent="World" instance=ExtResource("3_ur3n5")]
-position = Vector2(1230, 419)
 
 [node name="Vehicles" type="Node" parent="World"]
 

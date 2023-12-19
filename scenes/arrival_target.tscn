@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm4wnmpwh24jy"]
+
+[ext_resource type="PackedScene" uid="uid://cs0446kmbl4t3" path="res://scenes/target.tscn" id="1_j2l6p"]
+[ext_resource type="Script" path="res://scripts/arrival_target.gd" id="2_auaug"]
+
+[node name="Arrival Target" instance=ExtResource("1_j2l6p")]
+script = ExtResource("2_auaug")

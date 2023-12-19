@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://86rfmesf3sdc"]
+[gd_scene load_steps=4 format=3 uid="uid://86rfmesf3sdc"]
 
 [ext_resource type="PackedScene" uid="uid://l0gkfwa4wu36" path="res://levels/demo_scene.tscn" id="1_cg6ok"]
 [ext_resource type="Script" path="res://levels/seek_scene.gd" id="2_aq561"]
+[ext_resource type="PackedScene" uid="uid://cs0446kmbl4t3" path="res://scenes/target.tscn" id="3_yevjg"]
 
-[node name="Demo Scene" instance=ExtResource("1_cg6ok")]
+[node name="Seek Scene" instance=ExtResource("1_cg6ok")]
 script = ExtResource("2_aq561")
+
+[node name="Target" parent="World" index="1" instance=ExtResource("3_yevjg")]
+position = Vector2(1169, 410)

@@ -6,6 +6,7 @@ extends Control
 @onready var scenes = [
 	{"label": "Seek", "scene": "res://levels/seek_scene.tscn"},
 	{"label": "Flee", "scene": "res://levels/flee_scene.tscn"},
+	{"label": "Arrive", "scene": "res://levels/arrive_scene.tscn"},
 ]
 
 func _ready():

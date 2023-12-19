@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="Wander" load_steps=2 format=3 uid="uid://bb181mvsgksl7"]
+
+[ext_resource type="Script" path="res://scripts/behaviors/wander.gd" id="1_5vii4"]
+
+[resource]
+script = ExtResource("1_5vii4")

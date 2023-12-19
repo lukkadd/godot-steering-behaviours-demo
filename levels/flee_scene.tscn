@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvuxko3embewm"]
+[gd_scene load_steps=4 format=3 uid="uid://dvuxko3embewm"]
 
 [ext_resource type="PackedScene" uid="uid://l0gkfwa4wu36" path="res://levels/demo_scene.tscn" id="1_vinql"]
 [ext_resource type="Script" path="res://levels/flee_scene.gd" id="2_3neny"]
+[ext_resource type="PackedScene" uid="uid://cs0446kmbl4t3" path="res://scenes/target.tscn" id="3_b1bvu"]
 
 [node name="Flee_Scene" instance=ExtResource("1_vinql")]
 script = ExtResource("2_3neny")
+
+[node name="Target" parent="World" index="1" instance=ExtResource("3_b1bvu")]
+position = Vector2(1167, 419)

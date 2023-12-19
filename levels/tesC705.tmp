@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1kectogd0o4i"]
+
+[ext_resource type="PackedScene" uid="uid://bpvp0x3j202qc" path="res://scenes/wanderer.tscn" id="1_rfj1e"]
+[ext_resource type="Resource" uid="uid://bb181mvsgksl7" path="res://resources/wander.tres" id="2_oyen1"]
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="Wanderer" parent="." instance=ExtResource("1_rfj1e")]
+position = Vector2(652, 396)
+steering_behavior = ExtResource("2_oyen1")

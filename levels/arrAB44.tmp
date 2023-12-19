@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://6807okiraj07"]
+
+[ext_resource type="PackedScene" uid="uid://l0gkfwa4wu36" path="res://levels/demo_scene.tscn" id="1_bfsyb"]
+[ext_resource type="Script" path="res://levels/arrive_scene.gd" id="2_bhcrg"]
+[ext_resource type="PackedScene" uid="uid://bm4wnmpwh24jy" path="res://scenes/arrival_target.tscn" id="2_vd6mx"]
+
+[node name="Arrive Scene" instance=ExtResource("1_bfsyb")]
+script = ExtResource("2_bhcrg")
+
+[node name="Arrival Target" parent="World" index="1" instance=ExtResource("2_vd6mx")]
+position = Vector2(1160, 366)

@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="Arrive" load_steps=2 format=3 uid="uid://b55nccom2jta5"]
+
+[ext_resource type="Script" path="res://scripts/behaviors/arrive.gd" id="1_u0242"]
+
+[resource]
+script = ExtResource("1_u0242")

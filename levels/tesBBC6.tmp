@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1kectogd0o4i"]
+
+[ext_resource type="PackedScene" uid="uid://bpvp0x3j202qc" path="res://scenes/wanderer.tscn" id="1_rfj1e"]
+[ext_resource type="Resource" uid="uid://bb181mvsgksl7" path="res://resources/wander.tres" id="2_oyen1"]
+[ext_resource type="Resource" uid="uid://jlqov1pj3xuw" path="res://resources/seek.tres" id="2_r8u77"]
+[ext_resource type="PackedScene" uid="uid://byx8mbbxlcrtp" path="res://scenes/vehicle.tscn" id="4_kn578"]
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="Wanderer2" parent="." instance=ExtResource("1_rfj1e")]
+position = Vector2(501, 349)
+rotation = 1.5708
+steering_behavior = ExtResource("2_r8u77")
+
+[node name="Wanderer" parent="." instance=ExtResource("1_rfj1e")]
+position = Vector2(321, 396)
+steering_behavior = ExtResource("2_oyen1")
+
+[node name="Vehicle" parent="." instance=ExtResource("4_kn578")]
+position = Vector2(690, 483)
+steering_behavior = ExtResource("2_r8u77")

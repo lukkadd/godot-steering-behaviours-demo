@@ -3,7 +3,6 @@ class_name Demo_Scene
 
 #Interactive Nodes
 @onready var vehicle_container = $World/Vehicles
-@onready var flag = $World/Target
 
 #Label Nodes to update
 @onready var fps_label = $MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields2/hbox_fps/fps_value
@@ -47,13 +46,6 @@ func _input(event):
 				max_force = max_force + 1 if max_force != 10 else 10
 			KEY_ESCAPE:
 				get_tree().change_scene_to_file("res://levels/menu_screen.tscn")
-			KEY_T:
-				if target == null:
-					target_text = "Flag"
-					target = flag
-				else:
-					target_text = "Mouse"
-					target = null
 
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:

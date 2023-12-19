@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://b1kectogd0o4i"]
+
+[ext_resource type="PackedScene" uid="uid://bpvp0x3j202qc" path="res://scenes/wanderer.tscn" id="1_rfj1e"]
+[ext_resource type="Resource" uid="uid://bb181mvsgksl7" path="res://resources/wander.tres" id="2_oyen1"]
+[ext_resource type="PackedScene" uid="uid://cs0446kmbl4t3" path="res://scenes/target.tscn" id="3_4y1wa"]
+[ext_resource type="PackedScene" uid="uid://byx8mbbxlcrtp" path="res://scenes/vehicle.tscn" id="4_d583j"]
+[ext_resource type="Resource" uid="uid://b55nccom2jta5" path="res://resources/arrive.tres" id="5_wnexv"]
+[ext_resource type="Resource" uid="uid://jlqov1pj3xuw" path="res://resources/seek.tres" id="6_qspar"]
+[ext_resource type="PackedScene" uid="uid://bm4wnmpwh24jy" path="res://scenes/arrival_target.tscn" id="7_eqe1a"]
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="Target" parent="." instance=ExtResource("3_4y1wa")]
+position = Vector2(1069, 436)
+
+[node name="Arrival_target" parent="." instance=ExtResource("7_eqe1a")]
+position = Vector2(917, 298)
+
+[node name="Wanderer" parent="." instance=ExtResource("1_rfj1e")]
+position = Vector2(652, 396)
+steering_behavior = ExtResource("2_oyen1")
+max_speed = 3
+mass = 10
+
+[node name="arriver2" parent="." instance=ExtResource("4_d583j")]
+position = Vector2(148.999, 556.999)
+steering_behavior = ExtResource("5_wnexv")
+
+[node name="arriver" parent="." node_paths=PackedStringArray("target") instance=ExtResource("4_d583j")]
+position = Vector2(353, 204)
+steering_behavior = ExtResource("5_wnexv")
+target = NodePath("../Arrival_target")
+
+[node name="seeker" parent="." instance=ExtResource("4_d583j")]
+steering_behavior = ExtResource("6_qspar")

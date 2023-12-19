@@ -1,9 +1,9 @@
 extends Demo_Scene
 
-@onready var flag = $World/Target
+@onready var flag = $"World/Arrival Target"
 
 func _ready():
-	behavior = preload("res://resources/flee.tres")
+	behavior = preload("res://resources/arrive.tres")
 
 func _input(event):
 	if event is InputEventKey and event.pressed:

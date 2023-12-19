@@ -17,16 +17,19 @@ signal right_clicked(node)
 func screen_wrap():
 	position.x = clampf(position.x, 0, screen_size.x)
 	position.y = clampf(position.y, 0, screen_size.y)
+	
+func get_desired_velocity():
+	if steering_behavior != null:
+		if target:
+			return steering_behavior.calculate_desired_velocity(self, target)
+		else:
+			return steering_behavior.calculate_desired_velocity(self, get_global_mouse_position())
+	return Vector2.ZERO
 
 func _physics_process(delta):
 	
-	var desired_velocity = Vector2.ZERO
-	if steering_behavior != null:
-		if target:
-			desired_velocity = steering_behavior.calculate_desired_velocity(self, target)
-		else:
-			desired_velocity = steering_behavior.calculate_desired_velocity(self, get_global_mouse_position())
-		
+	var desired_velocity = get_desired_velocity()
+	
 	var steering_force = mass * (desired_velocity - velocity)
 	steering_force = steering_force.limit_length(max_force)
 	
@@ -34,7 +37,7 @@ func _physics_process(delta):
 	
 	position += velocity
 	
-	sprite.rotation = velocity.angle() + (PI/2)
+	sprite.rotation = velocity.angle() 
 	screen_wrap()
 
 func _on_area_2d_input_event(viewport, event, shape_idx):

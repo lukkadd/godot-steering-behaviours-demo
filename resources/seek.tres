@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Seek" load_steps=2 format=3 uid="uid://jlqov1pj3xuw"]
 
-[ext_resource type="Script" path="res://scripts/seek.gd" id="1_7sq14"]
+[ext_resource type="Script" path="res://scripts/behaviors/seek.gd" id="1_7sq14"]
 
 [resource]
 script = ExtResource("1_7sq14")
