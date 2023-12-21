@@ -9,6 +9,3 @@ script = ExtResource("2_ygtay")
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_n0v74")
-
-[node name="CollisionShape2D" parent="Area2D" index="0"]
-position = Vector2(-0.000628068, -172)

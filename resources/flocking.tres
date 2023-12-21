@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="Flocking" load_steps=2 format=3 uid="uid://ciemv6en842r"]
+
+[ext_resource type="Script" path="res://scripts/behaviors/flocking.gd" id="1_kajf4"]
+
+[resource]
+script = ExtResource("1_kajf4")

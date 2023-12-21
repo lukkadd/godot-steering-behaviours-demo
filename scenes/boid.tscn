@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3pdtklrqlneh"]
+
+[ext_resource type="PackedScene" uid="uid://byx8mbbxlcrtp" path="res://scenes/vehicle.tscn" id="1_tqyhh"]
+[ext_resource type="Texture2D" uid="uid://doqydkxa45dn4" path="res://assets/ship_0018.png" id="2_2qo3p"]
+[ext_resource type="Script" path="res://scripts/boid.gd" id="2_nclra"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qmlhv"]
+radius = 25.0
+
+[node name="Vehicle" instance=ExtResource("1_tqyhh")]
+script = ExtResource("2_nclra")
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(1, 1)
+texture = ExtResource("2_2qo3p")
+
+[node name="PerceptionArea" type="Area2D" parent="." index="3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PerceptionArea" index="0"]
+shape = SubResource("CircleShape2D_qmlhv")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3vyty05d3dct"]
+
+[ext_resource type="PackedScene" uid="uid://l0gkfwa4wu36" path="res://levels/demo_scene.tscn" id="1_5hvse"]
+[ext_resource type="Script" path="res://levels/wander_scene.gd" id="2_bqskk"]
+
+[node name="Demo Scene" instance=ExtResource("1_5hvse")]
+script = ExtResource("2_bqskk")
+
+[node name="T" parent="MarginContainer/Tutorial/MarginContainer/GridContainer" index="4"]
+visible = false
+
+[node name="change_t" parent="MarginContainer/Tutorial/MarginContainer/GridContainer" index="5"]
+visible = false
+
+[node name="hbox_target" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields" index="0"]
+visible = false
+
+[node name="target" parent="MarginContainer/Current_Vars/MarginContainer/VBoxContainer/hboxfields/hbox_target" index="0"]
+visible = false

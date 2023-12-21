@@ -83,3 +83,4 @@ func spawn_ship(_event):
 	instance.mass = mass
 	vehicle_container.add_child(instance)
 	instance.position = _event.position
+	return instance

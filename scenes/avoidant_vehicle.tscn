@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bluas0jhns08c"]
+
+[ext_resource type="PackedScene" uid="uid://byx8mbbxlcrtp" path="res://scenes/vehicle.tscn" id="1_qm4ol"]
+[ext_resource type="Script" path="res://scripts/avoidant_vehicle.gd" id="2_22a4i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qcaa"]
+size = Vector2(72.5001, 406)
+
+[node name="AvoidantVehicle" instance=ExtResource("1_qm4ol")]
+script = ExtResource("2_22a4i")
+
+[node name="Collider" type="Area2D" parent="." index="3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collider" index="0"]
+position = Vector2(-0.000731238, -170)
+shape = SubResource("RectangleShape2D_1qcaa")
